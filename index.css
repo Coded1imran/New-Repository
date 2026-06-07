@@ -1,0 +1,261 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.imran{
+    color: rgb(149, 160, 160);
+    
+}
+.portfolio{
+    color: rgb(225, 221, 17);
+}
+
+
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.link a{
+    text-decoration: none;
+    color:rgb(35, 102, 125);
+    font-weight: 500px;
+    transition: color 0.2s;
+    font-weight:700;
+}
+.aboutme:hover{
+    background: rgb(60, 53, 66);
+    transform: translateZ(-5px);
+    padding: 10px;
+    border-radius: 50px;
+    color: aliceblue;
+}
+.project:hover{
+    background: rgb(60, 53, 66);
+    transform: translateZ(-5px);
+    padding: 10px;
+    border-radius: 50px;
+    color: aliceblue;
+}
+.blog:hover{
+    background: rgb(60, 52, 67);
+    transform: translateZ(-5px);
+    padding: 10px;
+    border-radius: 50px;
+    color: aliceblue;
+}
+.link{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    
+}
+.explanation{
+    text-align: center;
+}
+.coded{
+    color: burlywood;
+}
+.work{
+    text-align: center;
+}
+.how{
+    text-align: center;
+    background: linear-gradient(rgb(65, 62, 62), rgb(115, 115, 123));
+    padding: 25px;
+    color: rgb(160, 150, 137);
+}
+.myself{
+    text-align: center;
+}
+.button{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: aliceblue;
+    background: rgb(64, 90, 64);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    margin-bottom: 20px;
+}
+.firstbutton:hover{
+
+    transform: translateY(-5px);
+}
+
+
+
+.firstbutton{
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+}
+.contact{
+    display: flex;
+    gap: 10px;
+}
+.github:hover{
+transform: translateY(-5px);
+}
+
+.linkedin:hover{
+transform: translateY(-5px);
+}
+
+
+.whatsapp:hover{
+transform: translateY(-5px);
+}
+
+
+.instagram:hover{
+transform: translateY(-5px);
+}
+
+.gmail:hover{
+transform: translateY(-5px);
+}
+
+.last{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+
+}
+footer{
+    background-color: rgb(59, 59, 57) ;
+    color: aliceblue;
+}
+.p{
+    text-align: center;
+}
+
+
+
+
+.process{
+    border-style:3px 3px outset;
+    text-align: center
+}
+.hero{
+    margin-left: 200px ;
+    background: #ffffff;
+    border-radius: 50px
+}
+
+.hey{
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   1. Theme Variables & Base Styles
+   ========================================== */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --btn-bg: #ffffff;
+    --btn-color: #495057;
+    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* When the body has the dark-theme class, variables flip */
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+    --btn-bg: #1e1e1e;
+    --btn-color: #f8f9fa;
+    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   2. Button & Icon Styling
+   ========================================== */
+.theme-btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--btn-shadow);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+
+.theme-btn:active {
+    transform: scale(0.95);
+}
+
+/* Icon Setup */
+.icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+/* ==========================================
+   3. Icon Switching Logic
+   ========================================== */
+
+/* Light Mode State (Default) */
+.moon-icon {
+    opacity: 0;
+    transform: rotate(90deg); /* Hidden & rotated */
+}
+
+.sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);  /* Visible */
+}
+
+/* Dark Mode State (When body.dark-theme is active) */
+body.dark-theme .sun-icon {
+    opacity: 0;
+    transform: rotate(-90deg); /* Hide sun */
+}
+
+body.dark-theme .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg);   /* Show moon */
+}
