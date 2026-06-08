@@ -1,77 +1,119 @@
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-.imran{
-    color: rgb(149, 160, 160);
-    
-}
-.portfolio{
-    color: rgb(225, 221, 17);
+/* ==========================================
+   1. Theme Variables & Base Styles
+   ========================================== */
+* {
+    box-sizing: border-box; /* Crucial for responsive math: includes padding in element width */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
 }
 
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --btn-bg: #ffffff;
+    --btn-color: #495057;
+    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-nav{
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+    --btn-bg: #1e1e1e;
+    --btn-color: #f8f9fa;
+    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   2. Responsive Navigation
+   ========================================== */
+nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 16px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrap on mid-sized views */
+    gap: 20px;
 }
-.link a{
-    text-decoration: none;
-    color:rgb(35, 102, 125);
-    font-weight: 500px;
-    transition: color 0.2s;
-    font-weight:700;
+
+.imran {
+    color: rgb(149, 160, 160);
 }
-.aboutme:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
+
+.portfolio {
+    color: rgb(225, 221, 17);
 }
-.project:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.blog:hover{
-    background: rgb(60, 52, 67);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.link{
+
+.link {
     display: flex;
     gap: 32px;
     list-style: none;
-    
+    margin: 0;
+    padding: 0;
 }
-.explanation{
+
+.link a {
+    text-decoration: none;
+    color: rgb(35, 102, 125);
+    font-weight: 700; /* Fixed: Removed 'px' bug */
+    transition: all 0.2s ease;
+    padding: 8px 16px; /* Uniform padding prevents "jumping" layout */
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.aboutme:hover, .project:hover, .blog:hover {
+    background: rgb(60, 53, 66);
+    color: aliceblue;
+    transform: translateY(-2px); /* Swapped translateZ for smoother 2D lift */
+}
+
+/* ==========================================
+   3. Content Blocks & Structural Layouts
+   ========================================== */
+.hero {
+    max-width: 800px;
+    margin: 40px auto; /* Fixed: replaced margin-left: 200px which broke mobile */
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 40px; /* Internal cushion for elements */
+}
+
+.explanation, .work, .myself, .p, .process {
     text-align: center;
 }
-.coded{
+
+.coded {
     color: burlywood;
 }
-.work{
-    text-align: center;
+
+.hey {
+    font-weight: 600;
 }
-.how{
+
+.how {
     text-align: center;
     background: linear-gradient(rgb(65, 62, 62), rgb(115, 115, 123));
-    padding: 25px;
+    padding: 40px 20px;
     color: rgb(160, 150, 137);
 }
-.myself{
-    text-align: center;
+
+.process {
+    border: 3px outset rgb(160, 150, 137); /* Fixed incorrect border-style shorthand */
+    padding: 20px;
 }
-.button{
+
+/* Call to Action Buttons */
+.button {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -85,120 +127,51 @@ nav{
     transition: all 0.25s ease;
     margin-bottom: 20px;
 }
-.firstbutton:hover{
 
-    transform: translateY(-5px);
-}
-
-
-
-.firstbutton{
+.firstbutton {
     display: block;
     width: fit-content;
     margin: 40px auto 0 auto;
 }
-.contact{
-    display: flex;
-    gap: 10px;
-}
-.github:hover{
-transform: translateY(-5px);
+
+.firstbutton:hover {
+    transform: translateY(-5px);
 }
 
-.linkedin:hover{
-transform: translateY(-5px);
+/* ==========================================
+   4. Footer & Social Elements
+   ========================================== */
+footer {
+    background-color: rgb(59, 59, 57);
+    color: aliceblue;
+    width: 100%;
 }
 
-
-.whatsapp:hover{
-transform: translateY(-5px);
-}
-
-
-.instagram:hover{
-transform: translateY(-5px);
-}
-
-.gmail:hover{
-transform: translateY(-5px);
-}
-
-.last{
+.last {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     flex-wrap: wrap;
-
-}
-footer{
-    background-color: rgb(59, 59, 57) ;
-    color: aliceblue;
-}
-.p{
-    text-align: center;
+    gap: 20px;
 }
 
-
-
-
-.process{
-    border-style:3px 3px outset;
-    text-align: center
-}
-.hero{
-    margin-left: 200px ;
-    background: #ffffff;
-    border-radius: 50px
+.contact {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.hey{
-    font-weight: 600;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================
-   1. Theme Variables & Base Styles
-   ========================================== */
-:root {
-    --bg-color: #f8f9fa;
-    --text-color: #212529;
-    --btn-bg: #ffffff;
-    --btn-color: #495057;
-    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* When the body has the dark-theme class, variables flip */
-body.dark-theme {
-    --bg-color: #121212;
-    --text-color: #f8f9fa;
-    --btn-bg: #1e1e1e;
-    --btn-color: #f8f9fa;
-    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: sans-serif;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* Cleaned grouped hover transformations */
+.github:hover, .linkedin:hover, .whatsapp:hover, .instagram:hover, .gmail:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease;
 }
 
 /* ==========================================
-   2. Button & Icon Styling
+   5. Theme Toggle Button Logic
    ========================================== */
 .theme-btn {
     background-color: var(--btn-bg);
@@ -218,15 +191,9 @@ body {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.theme-btn:hover {
-    transform: scale(1.05);
-}
+.theme-btn:hover { transform: scale(1.05); }
+.theme-btn:active { transform: scale(0.95); }
 
-.theme-btn:active {
-    transform: scale(0.95);
-}
-
-/* Icon Setup */
 .icon {
     position: absolute;
     width: 24px;
@@ -234,28 +201,64 @@ body {
     transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
+.moon-icon { opacity: 0; transform: rotate(90deg); }
+.sun-icon { opacity: 1; transform: rotate(0deg); }
+
+body.dark-theme .sun-icon { opacity: 0; transform: rotate(-90deg); }
+body.dark-theme .moon-icon { opacity: 1; transform: rotate(0deg); }
+
 /* ==========================================
-   3. Icon Switching Logic
+   6. RESPONSIVE BREAKPOINTS (Media Queries)
    ========================================== */
 
-/* Light Mode State (Default) */
-.moon-icon {
-    opacity: 0;
-    transform: rotate(90deg); /* Hidden & rotated */
+/* 📱 TABLET VIEWPORT (Max-width: 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        margin: 30px 20px;
+        padding: 30px;
+    }
+    nav, .last {
+        padding: 20px;
+    }
 }
 
-.sun-icon {
-    opacity: 1;
-    transform: rotate(0deg);  /* Visible */
-}
+/* 📱 MOBILE VIEWPORT (Max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
 
-/* Dark Mode State (When body.dark-theme is active) */
-body.dark-theme .sun-icon {
-    opacity: 0;
-    transform: rotate(-90deg); /* Hide sun */
-}
+    /* Stack navbar links vertically on phone screens */
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
 
-body.dark-theme .moon-icon {
-    opacity: 1;
-    transform: rotate(0deg);   /* Show moon */
+    .link {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .link a {
+        display: block;
+        width: 100%;
+    }
+
+    /* Re-arrange footer items nicely */
+    .last {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
+
+    .hero {
+        border-radius: 24px;
+        padding: 20px;
+    }
 }
