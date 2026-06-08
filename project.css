@@ -1,240 +1,11 @@
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-.imran{
-    color: rgb(149, 160, 160);
-    
-}
-.portfolio{
-    color: rgb(225, 221, 17);
-}
-
-
-nav{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.link a{
-    text-decoration: none;
-    color:rgb(24, 104, 130);
-    font-weight: 500px;
-    transition: color 0.2s;
-    font-weight:700;
-}
-.aboutme:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.project:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.blog:hover{
-    background: rgb(60, 52, 67);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.link{
-    display: flex;
-    gap: 32px;
-    list-style: none; 
-}
-
-
-
-
-/* Section Container */
-.projects-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: system-ui, -apple-system, sans-serif;
-}
-
-.projects-section h2 {
-  font-size: 2rem;
-  color: #2b457c;
-  margin-bottom: 32px;
-  border-bottom: 2px solid #f3f4f6;
-  padding-bottom: 12px;
-}
-
-/* Grid Layout */
-.projects-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* Project Card */
-.project-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 24px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-}
-
-/* Header Inside Card */
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.project-title {
-  font-size: 1.35rem;
-  color: #1f2937;
-  margin: 0;
-}
-
-.project-role {
-  font-size: 0.875rem;
-  color: #6b7280;
-  font-style: italic;
-}
-
-.project-description {
-  color: #4b5563;
-  line-height: 1.6;
-  margin: 0 0 20px 0;
-}
-
-/* Tech Tags */
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.project-tags span {
-  background: #f3f4f6;
-  color: #374151;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 4px;
-}
-
-/* Action Links/Buttons */
-.project-links {
-  display: flex;
-  gap: 16px;
-}
-
-.project-links a {
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.btn-primary {
-  color: #2563eb;
-}
-
-.btn-primary:hover {
-  text-decoration: underline;
-}
-
-.btn-secondary {
-  color: #4b5563;
-}
-
-.btn-secondary:hover {
-  color: #111827;
-}
-
-/* Responsive adjustment for small screens */
-@media (max-width: 640px) {
-  .project-header {
-    flex-direction: column;
-  }
-}
-
-
-.contact{
-    display: flex;
-    gap: 10px;
-}
-.github:hover{
-transform: translateY(-5px);
-}
-
-.linkedin:hover{
-transform: translateY(-5px);
-}
-
-
-.whatsapp:hover{
-transform: translateY(-5px);
-}
-
-
-.instagram:hover{
-transform: translateY(-5px);
-}
-
-.gmail:hover{
-transform: translateY(-5px);
-}
-
-.last{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    flex-wrap: wrap;
-
-}
-footer{
-     background-color: rgb(59, 59, 57) ;
-    color: aliceblue;
-}
-.p{
-    text-align: center;
-}
-
-
-
-
-.process{
-    border-style:3px 3px outset;
-    text-align: center
-}
-.hero{
-    margin-left: 200px ;
-    
-}
-
-
-
-
-
 /* ==========================================
    1. Theme Variables & Base Styles
    ========================================== */
+* {
+    box-sizing: border-box; /* Elements calculate internal padding accurately on screens */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 :root {
     --bg-color: #f8f9fa;
     --text-color: #212529;
@@ -243,7 +14,6 @@ footer{
     --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* When the body has the dark-theme class, variables flip */
 body.dark-theme {
     --bg-color: #121212;
     --text-color: #f8f9fa;
@@ -255,15 +25,253 @@ body.dark-theme {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: sans-serif;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Fixed: Stops cards from clipping past viewport height limits */
     margin: 0;
+    padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================
-   2. Button & Icon Styling
+   2. Layout & Global Typography Components
+   ========================================== */
+.imran {
+    color: rgb(149, 160, 160);
+}
+
+.portfolio {
+    color: rgb(225, 221, 17);
+}
+
+.p {
+    text-align: center;
+}
+
+.process {
+    border: 3px outset rgb(149, 160, 160); /* Fixed incomplete border syntax */
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto; /* Fixed: Extracted absolute left margin which caused browser overflow */
+    padding: 0 24px;
+}
+
+/* ==========================================
+   3. Header Navigation Block
+   ========================================== */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.link {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: rgb(24, 104, 130);
+    font-weight: 700; /* Fixed absolute font weight syntax bug */
+    padding: 8px 16px; /* Uniform fixed padding stabilizes links when hovering */
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.aboutme:hover, 
+.project:hover, 
+.blog:hover {
+    background: rgb(60, 53, 66);
+    color: aliceblue;
+    transform: translateY(-3px); /* Fixed jittery movement */
+}
+
+/* ==========================================
+   4. Portfolio Projects Section Styling
+   ========================================== */
+.projects-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    color: #2b457c;
+    margin-bottom: 32px;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 12px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-theme .project-card {
+    background: #1e1e1e; /* Complements dark mode environments */
+    border-color: #333333;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.project-title {
+    font-size: 1.35rem;
+    color: #1f2937;
+    margin: 0;
+}
+
+body.dark-theme .project-title {
+    color: #ffffff;
+}
+
+.project-role {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.project-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+body.dark-theme .project-description {
+    color: #d1d5db;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.project-tags span {
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+body.dark-theme .project-tags span {
+    background: #2d2d2d;
+    color: #e5e7eb;
+}
+
+.project-links {
+    display: flex;
+    gap: 16px;
+}
+
+.project-links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    color: #2563eb;
+}
+
+body.dark-theme .btn-primary {
+    color: #60a5fa;
+}
+
+.btn-primary:hover {
+    text-decoration: underline;
+}
+
+.btn-secondary {
+    color: #4b5563;
+}
+
+body.dark-theme .btn-secondary {
+    color: #9ca3af;
+}
+
+.btn-secondary:hover {
+    color: #111827;
+}
+
+body.dark-theme .btn-secondary:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   5. Footer & Social Integration
+   ========================================== */
+footer {
+    background-color: rgb(59, 59, 57);
+    color: aliceblue;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.last {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact {
+    display: flex;
+    gap: 10px;
+}
+
+.github, .linkedin, .whatsapp, .instagram, .gmail {
+    transition: transform 0.25s ease;
+}
+
+.github:hover, .linkedin:hover, .whatsapp:hover, .instagram:hover, .gmail:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   6. Core Dark Mode Toggle Interface Style
    ========================================== */
 .theme-btn {
     background-color: var(--btn-bg);
@@ -283,15 +291,9 @@ body {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.theme-btn:hover {
-    transform: scale(1.05);
-}
+.theme-btn:hover { transform: scale(1.05); }
+.theme-btn:active { transform: scale(0.95); }
 
-.theme-btn:active {
-    transform: scale(0.95);
-}
-
-/* Icon Setup */
 .icon {
     position: absolute;
     width: 24px;
@@ -299,28 +301,66 @@ body {
     transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
+.moon-icon { opacity: 0; transform: rotate(90deg); }
+.sun-icon { opacity: 1; transform: rotate(0deg); }
+
+body.dark-theme .sun-icon { opacity: 0; transform: rotate(-90deg); }
+body.dark-theme .moon-icon { opacity: 1; transform: rotate(0deg); }
+
 /* ==========================================
-   3. Icon Switching Logic
+   7. Premium Media Queries Breakpoints Framework
    ========================================== */
 
-/* Light Mode State (Default) */
-.moon-icon {
-    opacity: 0;
-    transform: rotate(90deg); /* Hidden & rotated */
+/* 💻 LAPTOPS & MID-SIZED MONITORS (Max-width: 1024px) */
+@media (max-width: 1024px) {
+    .projects-section {
+        padding: 40px 20px;
+    }
 }
 
-.sun-icon {
-    opacity: 1;
-    transform: rotate(0deg);  /* Visible */
+/* 📋 TABLETS & PORTRAIT VIEWS (Max-width: 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .link {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .link a {
+        display: block;
+        width: 100%;
+    }
+
+    .last {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
 }
 
-/* Dark Mode State (When body.dark-theme is active) */
-body.dark-theme .sun-icon {
-    opacity: 0;
-    transform: rotate(-90deg); /* Hide sun */
-}
+/* 📱 SMARTPHONES & MOBILE SCREENS (Max-width: 640px) */
+@media (max-width: 640px) {
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
 
-body.dark-theme .moon-icon {
-    opacity: 1;
-    transform: rotate(0deg);   /* Show moon */
+    .project-card {
+        padding: 16px;
+    }
+    
+    .projects-section h2 {
+        font-size: 1.75rem;
+    }
 }

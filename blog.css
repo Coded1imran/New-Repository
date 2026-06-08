@@ -1,299 +1,11 @@
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-.imran{
-    color: rgb(149, 160, 160);
-    
-}
-.portfolio{
-    color: rgb(225, 221, 17);
-}
-
-
-nav{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.link a{
-    text-decoration: none;
-    color:rgb(26, 105, 132);
-    font-weight: 500px;
-    transition: color 0.2s;
-    font-weight:700;
-}
-.aboutme:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.project:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.blog:hover{
-    background: rgb(60, 52, 67);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.link{
-    display: flex;
-    gap: 32px;
-    list-style: none; 
-}
-
-
-
-
-/* --- Portfolio Blog Section Styling --- */
-.portfolio-blog-section {
-  max-width: 1140px;
-  margin: 80px auto;
-  padding: 0 24px;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-/* Header Text Layout */
-.blog-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.blog-tagline {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #4f46e5; /* Clean Indigo Accent */
-  margin-bottom: 10px;
-}
-
-.blog-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: limegreen;
-  margin: 0 0 12px 0;
-  letter-spacing: -0.5px;
-}
-
-.blog-header p {
-  font-size: 1.1rem;
-  color: #4b5563;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-/* The 3-Column Grid */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-/* Individual Blog Cards */
-.blog-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-6px);
-  border-color: #d1d5db;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Image Container (Constrained Image on Top) */
-.blog-image-wrapper {
-  width: 100%;
-  height: 210px;
-  overflow: hidden;
-  background-color: #f3f4f6; /* Fallback for transparent PNGs */
-}
-
-.blog-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.blog-card:hover .blog-image-wrapper img {
-  transform: scale(1.04); /* Elegant, slow image zoom on card hover */
-}
-
-/* Card Body Content (Explanation Below) */
-.blog-content {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /* Pushes the footer to the absolute bottom of equal-height cards */
-}
-
-.blog-category {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #4f46e5;
-  background-color: #e0e7ff;
-  padding: 4px 10px;
-  border-radius: 6px;
-  width: fit-content;
-  margin-bottom: 14px;
-  letter-spacing: 0.5px;
-}
-
-.blog-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin: 0 0 12px 0;
-}
-
-.blog-title a {
-  color: #111111;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.blog-title a:hover {
-  color: #4f46e5;
-}
-
-.blog-excerpt {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #4b5563;
-  margin: 0 0 24px 0;
-  flex-grow: 1; /* Aligns description block spaces smoothly */
-}
-
-/* Footer Meta Text */
-.blog-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #f3f4f6;
-  padding-top: 16px;
-  font-size: 0.85rem;
-  color: #6b7280;
-  font-weight: 500;
-}
-
-.blog-read-time {
-  background-color: #f3f4f6;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-}
-
-/* --- Dynamic Responsiveness --- */
-@media (max-width: 968px) {
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr); /* Comfortably transitions to 2 columns on tablets */
-    gap: 24px;
-  }
-}
-
-@media (max-width: 640px) {
-  .blog-grid {
-    grid-template-columns: 1fr; /* Stacks seamlessly into a single line on mobile viewports */
-    gap: 24px;
-  }
-  
-  .blog-header h2 {
-    font-size: 2rem;
-  }
-}
-
-
-
-
-
-.contact{
-    display: flex;
-    gap: 10px;
-}
-.github:hover{
-transform: translateY(-5px);
-}
-
-.linkedin:hover{
-transform: translateY(-5px);
-}
-
-
-.whatsapp:hover{
-transform: translateY(-5px);
-}
-
-
-.instagram:hover{
-transform: translateY(-5px);
-}
-
-.gmail:hover{
-transform: translateY(-5px);
-}
-
-.last{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    flex-wrap: wrap;
-
-}
-footer{
-    background-color: rgb(59, 59, 57) ;
-    color: aliceblue;
-}
-.p{
-    text-align: center;
-}
-
-
-
-
-.process{
-    border-style:3px 3px outset;
-    text-align: center
-}
-.hero{
-    margin-left: 200px ;
-    
-}
-
-
-
-
-
-
-
 /* ==========================================
    1. Theme Variables & Base Styles
    ========================================== */
+* {
+    box-sizing: border-box; /* Elements respect uniform padding math across devices */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 :root {
     --bg-color: #f8f9fa;
     --text-color: #212529;
@@ -302,7 +14,6 @@ footer{
     --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* When the body has the dark-theme class, variables flip */
 body.dark-theme {
     --bg-color: #121212;
     --text-color: #f8f9fa;
@@ -314,15 +25,264 @@ body.dark-theme {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: sans-serif;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Fixed: Allows scrolling safely past vertical viewport constraint */
     margin: 0;
+    padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================
-   2. Button & Icon Styling
+   2. Structural Layout Elements
+   ========================================== */
+.imran {
+    color: rgb(149, 160, 160);
+}
+
+.portfolio {
+    color: rgb(225, 221, 17);
+}
+
+.p {
+    text-align: center;
+}
+
+.process {
+    border: 3px outset rgb(149, 160, 160); /* Fixed syntax error */
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto; /* Fixed: Left-margin 200px breaks centering on tablet/mobile views */
+    padding: 0 24px;
+}
+
+/* ==========================================
+   3. Header Navigation Block
+   ========================================== */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.link {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: rgb(26, 105, 132);
+    font-weight: 700; /* Fixed typo */
+    padding: 8px 16px; /* Added uniform static padding to block layouts from jumping */
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+/* Cleaner, unified animations */
+.aboutme:hover,
+.project:hover,
+.blog:hover {
+    background: rgb(60, 53, 66);
+    color: aliceblue;
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   4. Portfolio Blog Section Styling
+   ========================================== */
+.portfolio-blog-section {
+    max-width: 1140px;
+    margin: 80px auto;
+    padding: 0 24px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog-tagline {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+.blog-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: limegreen;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+}
+
+.blog-header p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.blog-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.35s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    border-color: #d1d5db;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.blog-image-wrapper {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.blog-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image-wrapper img {
+    transform: scale(1.04);
+}
+
+.blog-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4f46e5;
+    background-color: #e0e7ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    width: fit-content;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.blog-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+}
+
+.blog-title a {
+    color: #111111;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.blog-title a:hover {
+    color: #4f46e5;
+}
+
+.blog-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin: 0 0 24px 0;
+    flex-grow: 1;
+}
+
+.blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 16px;
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.blog-read-time {
+    background-color: #f3f4f6;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* ==========================================
+   5. Footer & Social Configurations
+   ========================================== */
+footer {
+    background-color: rgb(59, 59, 57);
+    color: aliceblue;
+    width: 100%;
+}
+
+.last {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact {
+    display: flex;
+    gap: 15px;
+}
+
+.github, .linkedin, .whatsapp, .instagram, .gmail {
+    transition: transform 0.25s ease;
+}
+
+.github:hover, .linkedin:hover, .whatsapp:hover, .instagram:hover, .gmail:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   6. Custom UI Dark Mode Button Trigger
    ========================================== */
 .theme-btn {
     background-color: var(--btn-bg);
@@ -342,15 +302,9 @@ body {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.theme-btn:hover {
-    transform: scale(1.05);
-}
+.theme-btn:hover { transform: scale(1.05); }
+.theme-btn:active { transform: scale(0.95); }
 
-.theme-btn:active {
-    transform: scale(0.95);
-}
-
-/* Icon Setup */
 .icon {
     position: absolute;
     width: 24px;
@@ -358,28 +312,70 @@ body {
     transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
+.moon-icon { opacity: 0; transform: rotate(90deg); }
+.sun-icon { opacity: 1; transform: rotate(0deg); }
+
+body.dark-theme .sun-icon { opacity: 0; transform: rotate(-90deg); }
+body.dark-theme .moon-icon { opacity: 1; transform: rotate(0deg); }
+
 /* ==========================================
-   3. Icon Switching Logic
+   7. Advanced Responsive Framework Breakpoints
    ========================================== */
 
-/* Light Mode State (Default) */
-.moon-icon {
-    opacity: 0;
-    transform: rotate(90deg); /* Hidden & rotated */
+/* 📋 TABLETS & LANDSCAPE VIEWPORTS (Max-width: 968px) */
+@media (max-width: 968px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr); /* Scales to beautiful 2-column structure */
+        gap: 24px;
+    }
+    .portfolio-blog-section {
+        margin: 60px auto;
+    }
 }
 
-.sun-icon {
-    opacity: 1;
-    transform: rotate(0deg);  /* Visible */
+/* 📱 SMARTPHONES & PORTRAIT SCREENS (Max-width: 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .link {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .link a {
+        display: block;
+        width: 100%;
+    }
+
+    .last {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
 }
 
-/* Dark Mode State (When body.dark-theme is active) */
-body.dark-theme .sun-icon {
-    opacity: 0;
-    transform: rotate(-90deg); /* Hide sun */
-}
+/* 📱 TINY MOBILE VIEWPORTS (Max-width: 640px) */
+@media (max-width: 640px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* Seamless vertical layout card chain alignment */
+        gap: 24px;
+    }
 
-body.dark-theme .moon-icon {
-    opacity: 1;
-    transform: rotate(0deg);   /* Show moon */
+    .blog-header h2 {
+        font-size: 2rem;
+    }
+
+    .portfolio-blog-section {
+        margin: 40px auto;
+        padding: 0 16px;
+    }
 }

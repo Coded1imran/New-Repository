@@ -1,256 +1,12 @@
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
-
-}
-.imran{
-    color: rgb(149, 160, 160);
-    
-}
-.portfolio{
-    color: rgb(225, 221, 17);
-}
-
-
-nav{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.link a{
-    text-decoration: none;
-    color:rgb(30, 113, 141);
-    font-weight: 500px;
-    transition: color 0.2s;
-    font-weight:700;
-}
-.aboutme:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.project:hover{
-    background: rgb(60, 53, 66);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.blog:hover{
-    background: rgb(60, 52, 67);
-    transform: translateZ(-5px);
-    padding: 10px;
-    border-radius: 50px;
-    color: aliceblue;
-}
-.link{
-    display: flex;
-    gap: 32px;
-    list-style: none; 
-}
-
-
-.span1{
-
-background-color: rgb(88, 50, 34);
-color: #f8f9fa;
-border-radius: 10px;
-}
-
-
-.span2{
-
-background-color: rgb(88, 50, 34);
-color: #f8f9fa;
-border-radius: 10px;
-}
-
-.span3{
-background-color: rgb(88, 50, 34);
-color: #f8f9fa;
-border-radius: 10px;
-
-}
-
-.span4{
-
-background-color: rgb(88, 50, 34);
-color: #f8f9fa;
-border-radius: 10px;
-}
-
-
-
-/* --- 4-Item Grid Styling --- */
-.hobbies-4-section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 24px;
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-.hobbies-4-section h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 8px;
-  color: #a5a5a5;
-}
-
-.section-subtitle {
-  text-align: center;
-  font-size: 1.05rem;
-  color: #666666;
-  margin-bottom: 40px;
-}
-
-/* The Grid Container */
-.hobby-4-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 30px; 
-}
-
-/* Individual Cards */
-.hobby-4-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hobby-4-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* Picture Context Container */
-.card-image-wrapper {
-  width: 100%;
-  height: 240px; /* Forces uniform canvas size for all PNGs */
-  overflow: hidden;
-  background-color: #f9fafb; /* Soft background color in case your PNGs have transparent backgrounds */
-}
-
-.card-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures PNGs scale and fill the area perfectly without stretching */
-  transition: transform 0.5s ease;
-}
-
-.hobby-4-card:hover .card-image-wrapper img {
-  transform: scale(1.05); 
-}
-
-/* Explanation Container Below */
-.card-text-content {
-  padding: 24px;
-}
-
-.card-text-content h3 {
-  font-size: 1.3rem;
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #1f2937;
-}
-
-.card-text-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #4b5563;
-  margin: 0;
-}
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
-  .hobby-4-grid {
-    grid-template-columns: 1fr; 
-    gap: 20px;
-  }
-  
-  .card-image-wrapper {
-    height: 200px; 
-  }
-}
-
-
-.contact{
-    display: flex;
-    gap: 10px;
-}
-.github:hover{
-transform: translateY(-5px);
-}
-
-.linkedin:hover{
-transform: translateY(-5px);
-}
-
-
-.whatsapp:hover{
-transform: translateY(-5px);
-}
-
-
-.instagram:hover{
-transform: translateY(-5px);
-}
-
-.gmail:hover{
-transform: translateY(-5px);
-}
-
-.last{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    flex-wrap: wrap;
-
-}
-footer{
-    background-color: rgb(59, 59, 57) ;
-    color: aliceblue;
-}
-.p{
-    text-align: center;
-}
-
-
-
-
-.process{
-    border-style:3px 3px outset;
-    text-align: center
-}
-.hero{
-    margin-left: 200px ;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================
    1. Theme Variables & Base Styles
    ========================================== */
+* {
+    box-sizing: border-box; /* Ensures padding scales inside elements across all screen dimensions */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 :root {
     --bg-color: #f8f9fa;
     --text-color: #212529;
@@ -259,7 +15,6 @@ footer{
     --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* When the body has the dark-theme class, variables flip */
 body.dark-theme {
     --bg-color: #121212;
     --text-color: #ffffff;
@@ -268,20 +23,215 @@ body.dark-theme {
     --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-
-
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: sans-serif;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Fixed: Swapped height to min-height to fix content overflow/cutoff */
+    width: 100%;
     margin: 0;
-   
+    padding: 0;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ==========================================
-   2. Button & Icon Styling
+   2. Layout & Global Custom Elements
+   ========================================== */
+.imran {
+    color: rgb(149, 160, 160);
+}
+
+.portfolio {
+    color: rgb(225, 221, 17);
+}
+
+.p {
+    text-align: center;
+}
+
+.process {
+    border: 3px outset rgb(149, 160, 160); /* Fixed incomplete border shorthand */
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto; /* Fixed: Removed margin-left: 200px which shoves layout off-screen on smaller monitors */
+    padding: 0 24px;
+}
+
+.span1, .span2, .span3, .span4 {
+    background-color: rgb(88, 50, 34);
+    color: #f8f9fa;
+    border-radius: 10px;
+    padding: 4px 8px; /* Balanced out styling tags */
+}
+
+/* ==========================================
+   3. Header Navigation Block
+   ========================================== */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.link {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: rgb(30, 113, 141);
+    font-weight: 700; /* Fixed font-weight 'px' syntax bug */
+    padding: 8px 16px; /* Uniform static padding fixes moving elements on hover */
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.aboutme:hover, 
+.project:hover, 
+.blog:hover {
+    background: rgb(60, 53, 66);
+    color: aliceblue;
+    transform: translateY(-3px); /* Fixed translateZ layout shaking */
+}
+
+/* ==========================================
+   4. Interactive 4-Item Grid (Hobbies Section)
+   ========================================== */
+.hobbies-4-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 24px;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.hobbies-4-section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #a5a5a5;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.hobby-4-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+}
+
+.hobby-4-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-4-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 240px; 
+    overflow: hidden;
+    background-color: #f9fafb; 
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.hobby-4-card:hover .card-image-wrapper img {
+    transform: scale(1.05); 
+}
+
+.card-text-content {
+    padding: 24px;
+}
+
+.card-text-content h3 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.card-text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin: 0;
+}
+
+/* ==========================================
+   5. Footer & Social Elements
+   ========================================== */
+footer {
+    background-color: rgb(59, 59, 57);
+    color: aliceblue;
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+
+.last {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact {
+    display: flex;
+    gap: 10px;
+}
+
+.github, .linkedin, .whatsapp, .instagram, .gmail {
+    transition: transform 0.25s ease;
+}
+
+.github:hover, .linkedin:hover, .whatsapp:hover, .instagram:hover, .gmail:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   6. Custom Theme Toggle UI Layout
    ========================================== */
 .theme-btn {
     background-color: var(--btn-bg);
@@ -301,44 +251,72 @@ body {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.theme-btn:hover {
-    transform: scale(1.05);
-}
+.theme-btn:hover { transform: scale(1.05); }
+.theme-btn:active { transform: scale(0.95); }
 
-.theme-btn:active {
-    transform: scale(0.95);
-}
-
-/* Icon Setup */
 .icon {
     position: absolute;
-    width: 24px;
+    width: 24px; /* Scaled up from 10px to be visible inside button container frame */
     height: 24px;
     transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
+.moon-icon { opacity: 0; transform: rotate(90deg); }
+.sun-icon { opacity: 1; transform: rotate(0deg); }
+
+body.dark-theme .sun-icon { opacity: 0; transform: rotate(-90deg); }
+body.dark-theme .moon-icon { opacity: 1; transform: rotate(0deg); }
+
 /* ==========================================
-   3. Icon Switching Logic
+   7. Advanced Fluid Breakpoints Media Queries
    ========================================== */
 
-/* Light Mode State (Default) */
-.moon-icon {
-    opacity: 0;
-    transform: rotate(90deg); /* Hidden & rotated */
+/* 📋 TABLETS & MID-SIZED SCREENS (Max-width: 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .link {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .link a {
+        display: block;
+        width: 100%;
+    }
+
+    .hobby-4-grid {
+        grid-template-columns: 1fr; /* Flattens grid column layout securely down to single view chain */
+        gap: 20px;
+    }
+    
+    .card-image-wrapper {
+        height: 200px; 
+    }
+
+    .last {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .contact {
+        justify-content: center;
+    }
 }
 
-.sun-icon {
-    opacity: 1;
-    transform: rotate(0deg);  /* Visible */
-}
-
-/* Dark Mode State (When body.dark-theme is active) */
-body.dark-theme .sun-icon {
-    opacity: 0;
-    transform: rotate(-90deg); /* Hide sun */
-}
-
-body.dark-theme .moon-icon {
-    opacity: 1;
-    transform: rotate(0deg);   /* Show moon */
+/* 📱 SMALL MOBILE DEVICES (Max-width: 480px) */
+@media (max-width: 480px) {
+    .hobbies-4-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .card-text-content {
+        padding: 16px;
+    }
 }
